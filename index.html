@@ -59,14 +59,7 @@ margin:2px;
 border:0;
 border-radius:50px;
 }
-.w3-border,.{
-outline:0;
-border:0;
-border-radius: 50px;
-background: #ffffff;
-box-shadow: inset 5px 5px 10px #d9d9d9,
-            inset -5px -5px 10px #ffffff;
-}
+
 .submit {
     background-color: #3fb6b2;
     padding: 12px 45px 12px 45px;
@@ -82,6 +75,8 @@ box-shadow: inset 5px 5px 10px #d9d9d9,
     background-color: #43a09d;
 }
 .contact {
+width:100%;
+left:0;
 text-align:center;
 }
 textarea {
@@ -138,7 +133,7 @@ var bdy = nma+":- "+ document.getElementById("mbdy").value;
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Krish <span class="w3-hide-small">WEBSITE</span> Vishwakarma</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Krish Vishwakarma</span>
   </div>
 </div>
 
@@ -211,11 +206,11 @@ var bdy = nma+":- "+ document.getElementById("mbdy").value;
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    <a href="pixelstore.html" target="_blank" >  <img src="https://dl.dropbox.com/s/4d48a0k4i4xfnnf/20210414_131914.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pixellab Project Sharing App"></a>
     </div>
 
     <div class="w3-col m3">
-      <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+      <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%"  class="w3-hover-opacity" alt="Coffee beans">
     </div>
 
     <div class="w3-col m3">
@@ -278,15 +273,19 @@ var bdy = nma+":- "+ document.getElementById("mbdy").value;
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: help.jokem@gmail.com<br>
             <i class="fa fa-telegram fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telegram Id: @Extreme_Krish<br>
      </div>
-<center><h3>SEND US A MESSAGE</h3></center>
+     <br>
+     </div>
+<h3 class="w3-center" >SEND US A MESSAGE</h3>
 
-<div class="contact" align="" >
+<div class="contact w3-container" align="" >
+<form>
                 <input name="name" type="text"  id="mnm" placeholder ="Your name" /><br/>
                 <input name="subject" type="subject" placeholder="Subject" id="msub" /><br/>
                 <textarea name="message" id="mbdy"  placeholder="Your Message"></textarea>
-              <a href="" id="mal" >  <input type="submit" value="SEND" class="submit" onclick="sendm()" /></a>
-            
+               <input type="submit" value="SEND" class="submit" onclick="sendm()" />
+            </form>
 </div>
+
    <!--   <form action="/action_page.php" target="_blank">
         <div>
           <div class="w3-half">
