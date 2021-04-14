@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <title>Extreme_Krish</title>
@@ -12,6 +11,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
   color: #777;
+  background:#fff;
   line-height: 1.8;
 }
 
@@ -54,7 +54,61 @@ body, html {
 .w3-round{
 border-radius:8px;
 }
+.w3-half{
+margin:2px;
+border:0;
+border-radius:50px;
+}
+.w3-border,.{
+outline:0;
+border:0;
+border-radius: 50px;
+background: #ffffff;
+box-shadow: inset 5px 5px 10px #d9d9d9,
+            inset -5px -5px 10px #ffffff;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+.contact {
+text-align:center;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 15px ;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 95%;
+    outline: none;
+}
 </style>
+<script type="text/javascript">
+function sendm() {
+var nma = document.getElementById("mnm").value;
+var sub = document.getElementById("msub").value;
+var bdy = nma+":- "+ document.getElementById("mbdy").value;
+ window.open("mailto:help.jokem@gmail.com?subject="+sub+"&body="+bdy);
+
+}
+
+</script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -221,12 +275,20 @@ border-radius:8px;
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chaubepur,Kanpur Nagar,UP !<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: help.jokem@gmail.com<br>
+            <i class="fa fa-telegram fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telegram Id: @Extreme_Krish<br>
+     </div>
+<center><h3>SEND US A MESSAGE</h3></center>
+
+<div class="contact" align="" >
+                <input name="name" type="text"  id="mnm" placeholder ="Your name" /><br/>
+                <input name="subject" type="subject" placeholder="Subject" id="msub" /><br/>
+                <textarea name="message" id="mbdy"  placeholder="Your Message"></textarea>
+              <a href="" id="mal" >  <input type="submit" value="SEND" class="submit" onclick="sendm()" /></a>
+            
+</div>
+   <!--   <form action="/action_page.php" target="_blank">
+        <div>
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
           </div>
@@ -239,7 +301,7 @@ border-radius:8px;
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
+      </form>-->
     </div>
   </div>
 </div>
@@ -255,7 +317,7 @@ border-radius:8px;
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by <a href="https://pages.github.com/" title="Github Pages" target="_blank" class="w3-hover-text-green">Github Pages</a></p>
 </footer>
  
 <script>
