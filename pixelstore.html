@@ -1,195 +1,327 @@
 <!DOCTYPE html>
 <html>
-    <head>
-   <link href="favicon.png" rel="icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-        <title>Joke Matics</title>
-        
-        <style>
-           #item {
-           background-color:transparent;
-           color: white;
-           padding: 14px;
-           font-size: 16px;
-           border: none;
-           cursor: none;
-           }
-           
-           .menu {
-           position: absolute;
-           display: inline-block;
-           height:50px;
-           right:0;
-           }
-           #submenu {
-           right:10px;
-           display: none;
-           position: absolute;
-           background-color: #ffffff;
-           min-width: 150px;
-           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-           
-           }
-           #submenu a {
-           color:black;
-           padding: 12px 16px;
-           text-decoration: none;
-           display: block;
-           }
-           #submenu a:hover {
-           background-color: #2196f3
-           }
-           /* Created by Scott Groves */
-           
-           html {
-           height: 100%;
-           }
-           body {
-           min-height: 100%;
-           }
-           .header_menu{
-           position:absolute;
-           display:block;
-           height:49px;
-           width:100%;
-           top:0;
-           left:0;
-           right:0;
-           background-color:#2196f3;
-           
-           
-           }
-           .fa-bars {
-           p
-           }
-           
-           .mfade {
-           animation:fadein 500ms;
-           
-           }
-           
-           @keyframes fadein {
-           
-           0% { opacity:0;}
-           100% {opacity:1;}
-           }
-           .h_logo{
-           height:35px;
-           margin-top:7px;
-           margin-left:5px;
-           }
-           .header_1 {
-           display:block;
-           margin-top:49px;
-           height:90vh;
-           
-           
-           
-           }   
-           *{
-           scroll-behavior:smooth;
-           }
-           body {
-           font-family: 'Open Sans', sans-serif;
-           }
-           body {
-           margin:0;
-           user-select:none;
-           color:#333;
-           }
-           #head{
-           width:100vw;
-           height:150px;
-           background:#2196f3;
-           display:flex;
-           align-items:center;
-           padding-top:100px;
-           flex-flow:column;
-           font-size:50px;
-           color:white;
-           font-weight:bold;
-           }
-           .link {
-           
-           }
-           .b{
-           border-bottom:0px solid grey;
-           }
-           .white-bttn{
-           font-size: 19px;
-           padding: 15px 33px;
-           margin-left: 15px;
-           background:#2196f3;
-           border: none;
-           outline: none;
-           cursor: none;
-           border-radius: 50px;
-           color: white;
-           font-weight: bold;
-           margin-top: 10px;
-           letter-spacing: 1px;
-           }
-        </style>
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-        <script>
-            
-            $(function() {
-    $("#item").click(function() {
-        $("#submenu").slideToggle(200,"linear");
-    });
-}); 
-            
-        </script>
-        <script>
-            // Created by Scott Groves
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<title></title>
 
-window.addEventListener("scroll", bringmenu);
-
-function bringmenu() {
-    if (window.pageYOffset >= 400) {
-        document.getElementById("myID").style.position = "fixed";
-         
-        document.getElementById("myID").classList.add("mfade");
-        
-    } else {
-        document.getElementById("myID").style.position = "absolute";
-        document.getElementById("myID").classList.remove("mfade");
-        
-    }
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        @font-face {
+            font-family: HelveticaNormal;
+            src: url("https://res.cloudinary.com/dp1xkuswt/raw/upload/v1597987314/Helvetica_uld9sz.ttf");
+        }
+span {
+display:block;
 }
+body {
+margin:0;
+font-family: 'Montserrat', sans-serif;
+}
+.header {
+scroll-snap-align:start;
+width:100%;
+height:100vh;
+}
+.title {
+display:block;
+font-size:2.4rem;
+margin:0;
+color:#414d59;
+font-family: 'HelveticaNormal';
+}
+.title2 {
+display:block;
+font-size:20px;
+color:#414d59;
+margin:20px;
+font-family: 'Rubik', sans-serif;
+}
+.wrapper {
+display:block;
+width:100%;
+}
+@media screen and (min-width: 800px) {
+   .wrapper {
+    transform:scale(2.1,2.1);
+  }
+}
+ 
+.hed1{
+background:#fefefe;
+display:flex;
+align-items:center;
+text-align:center;
 
+}
+.hed2{
+background:#a39afe;
+}
+.hed3 {
+background:#ffa496;
+}
+.hed4 {
+
+}
+.btn1{
+
+            width: 220px;
+            background: #3b4650;
+           
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 32px;
+            border:none;
+            outline:none;
+            color:white;
+            font-family: 'Rubik', sans-serif;
             
-        </script>
-    </head>
-    <body>
-    <div class="header_menu" id="myID">
-    <img src="https://raw.githubusercontent.com/ExtremeKrish/extremekrish.github.io/main/logo.png" class="h_logo" >
-    <div class="menu">
-      <div id="item"><i class="fa fa-bars" area-hidden="true" style="font-size:16px;"></i></div>
-      <div id="submenu">
-        <a href="pixelstore.html" class="link" >Home</a>
-        <a href="pixelstore/latest.html" class="link" >Download</a>
-        <a href="#" class="link" >Link 3</a>
-        <a href="#" class="link" >Link 4</a>
-        <a href="#" class="link" >Link 5</a>
-        <a href="#" class="link b" >Link 6</a>
-      </div>
-    </div>
-    </div>
-    <div class="header_1">
-<div id="head">Pixelstore<div style="height:20px;"></div><span style="font-size:20px;font-weight:normal">Version:- 1.0</span></div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2196f3" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,218.7C480,256,600,288,720,272C840,256,960,192,1080,176C1200,160,1320,192,1380,208L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-<div class="space" id="installation"></div>
+            /* box-shadow: 0px 2px 10px #cacaca; */
+}
+.btn2 {
+			border:none;
+			outline:none;
+            width: 220px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 16px;
+            border: 2px solid #3b4650;
+            height: 48px;
+            background: white;
+            font-family: 'Rubik', sans-serif;
+            /* box-shadow: 0px 2px 10px #cacaca; */
+}
+img {
+width:70%;
+display:flex;
+bottom:0;
+}
+.top{
+font-weight:bold;
+font-size:2.5vh;
+color:white;
+padding:20px;
+text-decoration:underline;
+}
+.superbody-mobile{
+         position: fixed;
+         top: 0;
+         left: 0;
+         overflow: hidden;
+         overflow-y: scroll;
+         height: 100vh;
+         width: 100%;
+         scroll-snap-type: y mandatory;
+     }
 
-<a href="pixelstore/latest.html" ><button class="white-bttn">Download</button>
+     .superbody-mobile::-webkit-scrollbar {
+         display: none;
+     }
+     .topp {
+     height:30vh;
+background:#3b4650;
+font-size:2.8vh;
+font-weight:bold;
+color:white;
+     }
+     
+     .section-7{
+     display: flex;
+     flex-direction: row;
+     height: 30vh;
+     overflow: hidden;
+     background: #323940;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     min-height: 160px;
+     scroll-snap-align: start;
+     }
+     @media screen and (max-width: 600px) {
+     .section-7 {
+     
+     }
+     }
+     
+     .s7-1-A{
+     font-size: 50px;
+     font-family: 'HelveticaNormal';
+     margin-left: 20px;
+     font-weight: bold;
+     color: #e8e8e8;
+     }
+     
+     .s7-1-B{
+     font-size: 20px;
+     font-family: 'HelveticaNormal';
+     margin-left: 20px;
+     color: #e8e8e8;
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     padding-left: 10px;
+     }
+     
+     .s7-2{
+     margin-left: 20px;
+     margin-right: 20px;
+     font-size: 15px;
+     font-family: 'Rubik', sans-serif;
+     color: #a9abad;
+     }
+     .read{
+     color:white;
+     width:20em;
+     font-size:2.5vh;
+     font-weight:normal;
+     }
+     .section-8 {
+     margin:20px;
+     
+     }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+<div class="superbodyMobile superbody-mobile" >
+<div class="header hed1" >
+
+<div class="wrapper" >
+<h1 class="title" >PIXELSTORE</h1>
+<h6 class="title2" >
+Create on Pixellab<br>Share on Pixelstore
+</h6>
+<a href="https://extremekrish.github.io/pixelstore/latest.html" ><button class="btn1" >Download Now</button></a>
 <br>
-<button class="white-bttn">Server Online</button>
-        </div>
-    
-    <p>
+<a href="#hed1" ><button class="btn2" >Learn More...</button></a>
+</div>
 
-    </p>
-    </body>
+</div>
+
+
+
+
+
+
+
+<div class="header hed2" id="hed1" align="center" >
+<div class="top" >What is Pixellab ?</div>
+<h3 class="read">Using Pixellab Photo editor you can make your photo with explosion, shattering and dispersion effect which is looks like real in pixel art photo editor. Pixellab allows you to create professional pic with pixelated background. Pixellab makes beautiful overlays on your photo that is a new attraction for your display picture or profile picture.<br><br>
+
+The pixellab photo editor helps you to quickly convert your image into a fashionable and realistic photo. It has spared the blending pixel effect in different styles for creating eye-catching pixel photo frame. This pixellab photo editor app comes with a new concept of photo editor new version 2018.<br><br>
+
+We used simple UI design which is easy to understand for all users. 3D pixel effect photo editor will add some amazing 3d pixel effect on the photo which you want to edit in your style.</h3>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="header hed3" align="center" >
+<div class="top" >What is Pixelstore ?</div>
+<h3 class="read" >
+Pixelstore is an app created and maintained by Starflow by which you can share your Pixellab projects.
+<br><br>Pixelstore allows you to create an profile in it and share your awesome edits
+<br><br>You can also get like comment and download counts in your pixellab projects if you share it
+
+</h3>
+
+</div>
+
+
+
+
+
+
+<div class="header hed4" >
+<section class="section-7">
+            <div class="s7-1">
+                <div class="s7-1-A">
+                    100+
+                </div>
+                <div class="s7-1-B">
+                    Installs
+                </div>
+            </div>
+            <div class="s7-2">
+                Trusted and used by more than 100 users.
+            </div>
+        </section>
+        <section class="section-8" >
+        
+        
+       <h4>About Pixelstore</h4>
+       Pixel store is an app created and maintained by Startflow
+        
+        </section>
+</div>
+</div>
+<script type="text/javascript">
+ScrollReveal().reveal(".title", {
+           delay: 0,
+           duration: 1000,
+           distance: '20%',
+           origin: 'bottom',
+           opacity: 0,
+           viewOffset: {
+               top: 0,
+               right: 0,
+               bottom: 0,
+               left: 0,
+           },
+       });
+
+       ScrollReveal().reveal(".title2", {
+           delay: 200,
+           duration: 1000,
+           distance: '20%',
+           origin: 'bottom',
+           opacity: 0,
+           viewOffset: {
+               top: 0,
+               right: 0,
+               bottom: 0,
+               left: 0,
+           },
+       });
+ScrollReveal().reveal(".btn1", {
+           delay: 450,
+           duration: 1000,
+           distance: '20%',
+           origin: 'bottom',
+           opacity: 0,
+           viewOffset: {
+               top: 0,
+               right: 0,
+               bottom: 0,
+               left: 0,
+           },
+       });
+
+       ScrollReveal().reveal(".btn2", {
+           delay: 700,
+           duration: 1000,
+           distance: '20%',
+           origin: 'bottom',
+           opacity: 0,
+           viewOffset: {
+               top: 0,
+               right: 0,
+               bottom: 0,
+               left: 0,
+           },
+       });
+</script>
+</body>
 </html>
