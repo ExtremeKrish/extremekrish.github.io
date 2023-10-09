@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* Disable tap highlight on all elements */
+    * {
+    -webkit-tap-highlight-color: transparent; /* Disable tap highlight on WebKit-based browsers (e.g., Safari, Chrome) */
+    tap-highlight-color: transparent; /* Disable tap highlight on non-WebKit browsers */
+    }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+background-image: url('body-bg.jpg');
+            /* Adjust background properties as needed */
+
+font-family:poppins;
+
+        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+background-image: url('header-bg.jpg');
+    color: black;
+padding:0 16px;
+    height:56px;
+    position:fixed;
+top:0;
+    left:0;
+    right:0;
+}
+        .title {
+            font-size: 20px;
+                        font-weight:450;
+                        padding:0;
+                        margin:0;
+        }
+        .hamburger {
+            cursor: pointer;
+            font-size: 24px;
+            margin-right:8px;
+            padding:0;
+            margin:0;
+        }
+        .drawer-container {
+            position: relative;
+        }
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: -262px;
+            width: 250px;
+            height: 100%;
+background-image: url('body-bg.jpg');
+border-left:12px solid #735402;
+            transition: right 0.3s;
+            z-index: 1;
+
+        }
+        .drawer-inner {
+            padding: 0px;
+        }
+        .drawer-inner ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        }
+        .drawer-inner ul span{
+                border-bottom:1px solid #D29657;
+                display:flex;
+                padding:8px;
+                justify-content:center;
+                background-image:url('toolbar-bg.jpg');
+        }
+        .drawer-inner li{
+        padding:14px 16px;
+        border-bottom:1px solid #D29657;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.5s;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .overlay.active {
+            background-color: rgba(0, 0, 0, 0.2);
+            pointer-events: auto;
+        }
+        header {
+        background-image:url('toolbar-bg.jpg');
+        padding:16px;
+                color:#573F02;
+                margin-top:56px;
+        }
+        h2{
+        font-weight:400;
+        margin:0;
+        padding-bottom:14px;
+
+        }
+        button ,button a{
+        padding:8px;
+        border:0px solid black;
+        border-radius:4px;
+        font-family:poppins;
+        margin-top:16px;
+        background:#25656E;
+        color:white;
+        text-decoration:none;
+        }
+        .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20px, 2fr));
+        gap: 1.5rem;
+        justify-content: center;
+padding:16px;
+        }
+        
+        .book-banner {
+        background-color: #f2f2f2;
+
+        text-align: center;
+ 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        width:100px;
+        height:160px;
+        }
+        
+        @media screen and (max-width: 768px) {
+        .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Concise Gita</div>
+        <div class="hamburger" onclick="toggleDrawer()">☰</div>
+    </div>
+    <div class="drawer-container">
+        <div class="overlay" onclick="closeDrawer()"></div>
+        <div class="drawer">
+            <div class="drawer-inner">
+<ul>
+<span>Main Menu Navigation</span>
+<li>Library</li>
+<li>Index</li>
+<li>Tools</li>
+<li>Donate</li>
+<li>Contact Us</li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <header>
+   <h2> The topmost source of spiritual knowledge.</h2>
+Dive into the heart of spirituality with "Concise Gita," unraveling the Bhagavad Gita's teachings on purpose, soul, and enlightenment.<br>
+    <button>Take a tour</button>
+    <button><a href="_index.html" >Continue Reading</a></button>
+    </header>
+    
+    <section>
+    <div class="book-grid">
+<img class="book-banner" src="https://i.imgur.com/BxQ83Dh.png"  >
+
+
+    </div>
+    </section>
+    <script>
+        function toggleDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            if (drawer.style.right === '-262px') {
+                drawer.style.right = '0';
+                overlay.classList.add('active');
+            } else {
+                drawer.style.right = '-262px';
+                overlay.classList.remove('active');
+            }
+        }
+
+        function closeDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            drawer.style.right = '-262px';
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

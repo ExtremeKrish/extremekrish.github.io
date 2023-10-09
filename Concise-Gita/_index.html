@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* Disable tap highlight on all elements */
+    * {
+    -webkit-tap-highlight-color: transparent; /* Disable tap highlight on WebKit-based browsers (e.g., Safari, Chrome) */
+    tap-highlight-color: transparent; /* Disable tap highlight on non-WebKit browsers */
+    }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+background-image: url('body-bg.jpg');
+            /* Adjust background properties as needed */
+
+font-family:poppins;
+
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+background-image: url('header-bg.jpg');
+            color: black;
+padding:0 16px;
+            height:56px;
+            position:fixed;
+top:0;
+            left:0;
+            right:0;
+        }
+        .title {
+            font-size: 20px;
+                        font-weight:450;
+                        padding:0;
+                        margin:0;
+        }
+        .hamburger {
+            cursor: pointer;
+            font-size: 24px;
+            margin-right:8px;
+            padding:0;
+            margin:0;
+        }
+        .drawer-container {
+            position: relative;
+        }
+        .drawer {
+            position: fixed;
+            top: 0;
+            right: -262px;
+            width: 250px;
+            height: 100%;
+background-image: url('body-bg.jpg');
+border-left:12px solid #735402;
+            transition: right 0.3s;
+            z-index: 1;
+
+        }
+        .drawer-inner {
+            padding: 0px;
+        }
+        .drawer-inner ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        }
+        .drawer-inner ul span{
+                border-bottom:1px solid #D29657;
+                display:flex;
+                padding:8px;
+                justify-content:center;
+                background-image:url('toolbar-bg.jpg');
+        }
+        .drawer-inner li{
+        padding:14px 16px;
+        border-bottom:1px solid #D29657;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.5s;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .overlay.active {
+            background-color: rgba(0, 0, 0, 0.2);
+            pointer-events: auto;
+        }
+        header {
+        background-image:url('toolbar-bg.jpg');
+        padding:16px;
+                color:#573F02;
+                margin-top:56px;
+        }
+        h2{
+        font-weight:400;
+        margin:0;
+        padding-bottom:14px;
+
+        }
+        button {
+        padding:8px;
+        border:0px solid black;
+        border-radius:4px;
+        font-family:poppins;
+        margin-top:16px;
+        background:#25656E;
+        color:white;
+        }
+        .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20px, 2fr));
+        gap: 1.5rem;
+        justify-content: center;
+padding:16px;
+        }
+        
+        .book-banner {
+        background-color: #f2f2f2;
+
+        text-align: center;
+ 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        width:100px;
+        height:160px;
+        }
+        
+        @media screen and (max-width: 768px) {
+        .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        }
+        section ol li {
+
+        padding:4px 16px 4px 10px;
+
+        }
+        ol li span{
+        font-weight:450;
+        }
+        ol li p{
+        text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">Concise Gita</div>
+        <div class="hamburger" onclick="toggleDrawer()">☰</div>
+    </div>
+    <div class="drawer-container">
+        <div class="overlay" onclick="closeDrawer()"></div>
+        <div class="drawer">
+            <div class="drawer-inner">
+<ul>
+<span>Main Menu Navigation</span>
+<li>Library</li>
+<li>Index</li>
+<li>Tools</li>
+<li>Donate</li>
+<li>Contact Us</li>
+</ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <section style="margin-top:72px;" >
+<ol>
+<li><span>What is 'Aatma'?</span>
+<p>According to the Bhagavad Gita, the "Atma" is described as eternal, unchanging, and indestructible. It is the innermost essence of a living being, distinct from the physical body. </p></li>
+<li><span>What is the size of the Atma (soul)?</span>
+<p>The size of the Atma is described as being one-ten-thousandth the size of the tip of a hair (Anu or Anur) in Bhagavad Gita (2.17).</p></li>
+<li><span>How can we see the soul?</span>
+<p>The soul is so small and subtle that it cannot be seen with any physical instrument or through external means. Its infinitesimal nature makes it beyond the scope of ordinary perception.</p></li>
+<li><span>What is the source of soul?</span>
+<p>The soul (aatma) originates from the god (paramatma), and when it enters the material world, it becomes entangled in various bonds and acquires a subtle body. Before assuming a physical form, the soul resides in the association of great souls and ultimately returns to the Supreme Soul (paramatma)through self-realization (moksh).</p></li>
+<li><span>What is the nature of the eternal soul according to the Bhagavad Gita?</span>
+<p>The Bhagavad Gita (2.20) describes the soul as eternal, indestructible, and beyond the physical body. It cannot be cut, burned, or destroyed.</p></li>
+<li><span>How does the Bhagavad Gita explain the soul's relationship with the body?</span>
+<p>In the Bhagavad Gita (2.22), it is explained that just as a person changes worn-out clothes, the soul changes bodies, leaving the old and acquiring a new one.</p></li>
+<li><span>What is the ultimate destiny of the eternal soul?</span>
+<p>The soul is never born and never dies; it simply undergoes cycles of reincarnation until it attains liberation (moksha) by realizing its true nature.
+(Source: Bhagavad Gita 2.24).</p>
+<li><span>How does one realize the eternal soul?</span>
+<p>By controlling the mind through yoga and meditation, one can perceive the soul's eternal nature and attain spiritual enlightenment.
+(Source: Bhagavad Gita 2.70)</p></span></li>
+<li><span>What is the significance of understanding the eternal soul's nature?</span>
+<p>Understanding the eternal soul's indestructible nature leads to freedom from fear, attachment, and suffering, ultimately leading to liberation from the cycle of birth and death.</p></li>
+<li><span>What does the word 'Bhagavan' mean?</span>
+<p>'Bhag' means richness or abundance, and 'van' means someone who has it. Bhagavan means someone who has complete richness in six aspects: strength, fame, wealth, beauty, knowledge, and renunciation.</p></li>
+</li>
+</ol>
+    </section>
+    <script>
+        function toggleDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            if (drawer.style.right === '-262px') {
+                drawer.style.right = '0';
+                overlay.classList.add('active');
+            } else {
+                drawer.style.right = '-262px';
+                overlay.classList.remove('active');
+            }
+        }
+
+        function closeDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            drawer.style.right = '-262px';
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
