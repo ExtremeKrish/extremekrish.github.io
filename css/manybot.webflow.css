@@ -226,11 +226,10 @@ font-family: 'Poppins', sans-serif;
   line-height: 30px;
 }
 .main-cta-button.hero {
-  display: block;
-  width: 200px;
-  margin: 0px auto 35px;
-  padding: 13px 11px;
-  border-radius: 2px;
+  display: inline-block;
+  margin: 0px 8px 35px;
+  padding: 8px 12px;
+  border-radius: 4px;
   background-color: #f88930;
 }
 .feature-text-block {
